@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/wreger/Documents/git/inovex/elk-vagrant/vagrant-assets/scripts/provision/debian/custom/saltstack_provision'
+let g:netrw_dirhist_2='/Users/wreger/Documents/git/dev_environments/osdcm/osdcm_infra-vagrant/.git'
+let g:netrw_dirhist_3='/Users/wreger/Documents/Dev/dev_environments/vagrant-hdp/blueprints'
+let g:netrw_dirhist_4='/Users/wreger/.ansible'
+let g:netrw_dirhist_5='/Users/wreger/.zprezto/.git'
