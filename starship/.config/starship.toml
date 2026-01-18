@@ -1,0 +1,199 @@
+# promt colors I used:
+# #06969A (petrol)
+# #86BBD8 (light blue)
+# #33658A (dark blue)
+# #DA627D (petrol red)
+# #FCA17D (apreco)
+# #9A348E (purple)
+
+format = """
+[](#9A348E)\
+$os\
+$username\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_state\
+[](fg:#FCA17D bg:#86BBD8)\
+$git_branch\
+$git_status\
+[](fg:#86BBD8 bg:#06969A)\
+$docker_context\
+[](fg:#06969A)\
+$fill\
+[](fg:black)\
+$status\
+[](fg:#86BBD8 bg:black)\
+$nodejs\
+$azure\
+$python\
+$terraform\
+$lua\
+$rust\
+[](fg:#06969A bg:#86BBD8)\
+$openstack\
+$cmd_duration\
+[](fg:#33658A bg:#06969A)\
+$time\
+[](fg:#33658A)\
+$line_break\
+$character
+"""
+
+command_timeout = 500
+
+[fill]
+symbol = "·"
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[$user ]($style)'
+disabled = false
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+style = "bg:#9A348E"
+disabled = true # Disabled by default
+
+[directory]
+style = "bg:#DA627D"
+format = "[ $path ]($style)"
+truncation_length = 100
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Movies" = "󰟞 "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[c]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+# [git_state]
+# format = '[\($state( $progress_current of $progress_total)\)]($style) '
+# cherry_pick = '[🍒 PICKING](bold red)'
+#
+[git_branch]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol $branch ]($style)'
+
+# [git_status]
+# style = "bg:#FCA17D"
+# untracked = ""
+# format = '([\[$conflicted$deleted$renamed$modified$staged$behind\]]($style))'
+# modified = '*'
+# # format = '[$all_status$ahead_behind ]($style)'
+[git_status]
+ahead = "⇡${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+behind = "⇣${count} "
+modified = '[!$count](bg:#86BBD8) '
+staged = "+${count} "
+untracked = "?${count} "
+stashed = '📦 ${count} '
+up_to_date = '[✓](green bg:#86BBD8) '
+style = "bg:#86BBD8"
+format = "[$all_status$ahead_behind]($style)"
+
+[golang]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%T" # Hour:Minute Format
+ style = "bg:#33658A"
+format = '[ $time ]($style)'
+
+[azure]
+disabled = false
+format = 'on [$symbol($subscription)]($style) '
+symbol = ' '
+style = "bg:#86BBD8"
+
+[lua]
+format = '[$symbol($version )]($style)'
+style = "bg:#86BBD8"
+
+[openstack]
+format = '[$symbol$cloud(\($project\))]($style)'
+style = "bg:#06969A"
+# symbol = '☁️ '
+symbol = '󰅟 '
+
+[terraform]
+format = '[$symbol($version )]($style)'
+style = "bg:#86BBD8"
+symbol = '󱁢 '
+
+[python]
+style = "bg:#86BBD8"
+pyenv_version_name = true
+format = '[${symbol}${version}]($style)'
+
+[cmd_duration]
+style = "bg:#06969A"
+# style = "bg:#86BBD8"
+format = '[⏱ $duration]($style)'
+
+[status]
+disabled = false
+style = "bg:#000000"
+success_symbol = "[✔](green bg:black)"
+symbol = "[✘](red bg:black)"
+format = '[$symbol$common_meaning$signal_name$maybe_int]($style)'

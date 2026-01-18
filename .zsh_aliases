@@ -1,0 +1,37 @@
+# Always enable colored `rg` output
+alias grep='rg --color=auto'
+
+# Flush Directory Service cache
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Empty the Trash on all mounted volumes and the main HDD.
+# Also, clear Apple’s System Logs to improve shell startup speed.
+# Finally, clear download history from quarantine. https://mths.be/bum
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Docker - Lima
+alias docker="podman"
+
+# Some Aliases for plugins
+alias vim='nvim'
+alias vi='nvim'
+alias ls="eza --icons=always --long --icons=always --no-time -s type --sort=name"
+alias ll="eza -las type --sort=name"
+alias cat='bat'
+alias less='bat --pager "less -R"'
+alias f='fzf --preview "bat --color \"always\" {}"'
+alias man='tldr'
+alias top='glances'
+alias myip='curl https://ifconfig.co'
+
+# iA Writer Alias
+alias ia="open $1 -a /Applications/iA\ Writer.app"
+
+# OpenTofu / Terraform Alias
+alias terraform="tofu"

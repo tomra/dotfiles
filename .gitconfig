@@ -1,0 +1,105 @@
+[branch]
+  # Show most recently changed branches first.
+  sort = -committerdate
+
+[color]
+  ui = auto
+
+[color "diff"]
+  oldMoved=241
+  newMoved=254
+
+[column]
+  ui = auto
+
+[commit]
+  verbose = true
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = nvim
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
+
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+
+[format]
+  pretty = fuller
+
+[gc]
+  reflogExpire = 360 days
+  reflogExpireUnreachable = 180 days
+  pruneExpire = 90 days
+
+[help]
+  autocorrect = prompt
+
+[init]
+  defaultBranch = main
+
+[log]
+  decorate = short
+  follow = true
+
+[merge]
+  log = true
+  tool = vimdiff
+  conflictStyle = diff3
+
+[mergetool]
+	keepBackup = false
+
+[pull]
+  rebase = false
+
+[push]
+  default = simple
+  autoSetupRemote = true
+  followTags = true
+
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
+[status]
+  showStash = true
+
+[tag]
+  sort = version:refname
+
+[user]
+	name = Waldemar Reger
+[includeif "gitdir:/Users/wreger/Documents/dev/private/"]
+  path = .gitconfig.private
+[includeif "gitdir:/Users/wreger/Documents/dev/inovex/"]
+  path = .gitconfig.work
+[includeif "gitdir:/Users/wreger/.dotfiles/"]
+  path = .gitconfig.private
+
+
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[tig "color"]
+	# A strange looking cursor line
+	cursor		= red	default underline
+	cursor-blur		= yellow	default underline
+	# UI colors
+	title-blur	= white	blue
+	title-focus	= white	blue	bold
+# View-specific color
+[tig "color.tree"]
+	date		= cyan	default	bold

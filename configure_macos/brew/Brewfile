@@ -1,0 +1,139 @@
+# Required taps
+tap "esolitos/ipa"
+
+tap "homebrew/cask-fonts"
+
+tap "jzaleski/homebrew-jzaleski"
+
+
+# Regular brew formulas
+brew "airbuddy"
+brew "apg"
+brew "azure-cli"
+brew "bat"
+brew "bartender"
+brew "bitwarden-cli"
+brew "bottom"
+brew "brew-cask-upgrade"
+brew "certbot"
+brew "ctop"
+brew "curl"
+brew "dust"
+brew "eza"
+brew "font-hack-nerd-font"
+brew "fd"
+brew "fzf"
+brew "gemini-cli"
+brew "git"
+brew "git-crypt"
+brew "git-review"
+brew "gnupg"
+brew "glances"
+brew "golang"
+brew "ipcalc"
+brew "ipmitool"
+brew "jo"
+brew "jq"
+brew "k9s"
+brew "kubectl"
+brew "lego"
+brew "mas"
+brew "mosh"
+brew "mtr"
+brew "neovim"
+brew "opencode"
+brew "opentofu"
+brew "pass"
+brew "podman"
+brwe "pv"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "python@3.14"
+brew "ripgrep"
+brew "rsync"
+brew "s3cmd"
+brew "sdk2"
+brew "slides"
+brew "sniffnet"
+brew "sshpass"
+brew "starship"
+brew "synology-drive"
+brew "syntax-highlight"
+brew "tealdeer"
+brew "tig"
+brew "tmux"
+brew "tree"
+brew "tree-sitter"
+brew "watch"
+brew "wget"
+brew "xz"
+brew "zstd"
+
+# Casks
+cask "aldente"
+cask "alfred"
+cask "arc"
+cask "bartender"
+cask "TheBoredTeam/boring-notch/boring-notch"
+cask "calibre"
+cask "cardhop"
+cask "choosy"
+cask "dropzone"
+cask "fantastical"
+cask "gas-mask"
+cask "gemini"
+cask "ghostty"
+cask "iina"
+cask "imazing-converter"
+cask "istat-menus"
+cask "keka"
+cask "keyboardcleantool"
+cask "kitty"
+cask "ledger-wallet"
+cask "little-snitch"
+cask "maestral"
+cask "monitorcontrol"
+cask "obsidian"
+cask "ollama"
+cask "orcaslicer"
+cask "pdf-expert"
+cask "proton-pass"
+cask "qlmarkdown"
+cask "raycast"
+cask "rapidapi"
+cask "screens"
+cask "signal"
+cask "syntax-highlight"
+cask "threema@beta"
+cask "viscosity"
+cask "vivaldi"
+cask "wireshark"
+cask "wireshark-app"
+cask "zen"
+
+
+# App Store apps
+mas "AdBlock Pro", id: 1018301773
+mas "Affinity Photo", id: 824183456
+mas "Airmail", id: 918858936
+mas "Amphetamine", id: 937984704
+mas "Color Picker", id: 641027709
+mas "Conjuu ES", id: 827143313
+mas "File Viewer", id: 495987613
+mas "Goodnotes", id: 1444383602
+mas "iA Writer", id: 775737590
+mas "Linkeeper", id: 6449708232
+mas "MoneyMoney", id: 872698314
+mas "MQTT Explorer", id: 1455214828
+mas "Network Radar", id: 507659816
+mas "NiceCopy", id: 6737711441
+mas "Numbers", id: 409203825
+mas "Reeder", id: 1529448980
+mas "Secrets", id: 1591056366
+mas "Slack", id: 803453959
+mas "SnippetsLab", id: 1006087419
+mas "Strongbox", id: 1481853033
+mas "Things", id: 904280696
+mas "Wifi Signal", id: 525912054
+mas "WireGuard", id: 1451685025
+mas "Yoink", id: 457622435
