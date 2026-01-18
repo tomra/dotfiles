@@ -2,6 +2,8 @@ source ${HOME}/.zsh_aliases
 
 # Customize to your needs...
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE=32768
 export SAVEHIST=32768
