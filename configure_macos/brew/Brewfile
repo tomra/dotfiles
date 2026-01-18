@@ -67,6 +67,8 @@ brew "tree-sitter"
 brew "watch"
 brew "wget"
 brew "xz"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 brew "zstd"
 
 # Casks

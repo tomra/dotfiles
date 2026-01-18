@@ -35,10 +35,8 @@ _comp_options+=(globdots)		# Include hidden files.
 [ -f ~/.zshlocal ] && source ~/.zshlocal
 
 # load zsh plugins
-# source #{HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source $HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source ${HOME}/.dotfiles/zsh/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ${HOME}/.dotfiles/zsh/zsh_plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # prompt
 eval "$(starship init zsh)"
