@@ -136,6 +136,8 @@ format = '[ $symbol($version) ]($style)'
 
 [kubernetes]
 disabled = false
+style = "bg:#33658A"
+format = '[ $symbol$context ]'
 
 [rust]
 symbol = ""
@@ -145,7 +147,7 @@ format = '[ $symbol ($version) ]($style)'
 [time]
 disabled = false
 time_format = "%T" # Hour:Minute Format
- style = "bg:#33658A"
+style = "bg:#33658A"
 format = '[ $time ]($style)'
 
 [azure]
