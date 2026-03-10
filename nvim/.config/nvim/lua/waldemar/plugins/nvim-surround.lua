@@ -3,10 +3,4 @@
 return {
   "kylechui/nvim-surround",
   event = "VeryLazy",
-  opts = {
-    keymaps = {
-      visual_line = false,
-      visual = 'Z',
-    },
-  },
 }
