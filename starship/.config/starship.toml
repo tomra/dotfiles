@@ -30,6 +30,7 @@ $python\
 $terraform\
 $lua\
 $rust\
+$uv_python\
 [](fg:#06969A bg:#86BBD8)\
 $openstack\
 $cmd_duration\
@@ -136,7 +137,7 @@ format = '[ $symbol($version) ]($style)'
 
 [kubernetes]
 disabled = false
-style = "bg:#33658A"
+style = "bg:#06969A"
 format = '[ $symbol$context ]($style)'
 
 [rust]
@@ -173,7 +174,7 @@ symbol = '󱁢 '
 
 [python]
 style = "bg:#86BBD8"
-pyenv_version_name = true
+pyenv_version_name = false
 format = '[${symbol}${version}]($style)'
 
 [cmd_duration]
@@ -187,3 +188,11 @@ style = "bg:#000000"
 success_symbol = "[✔](green bg:black)"
 symbol = "[✘](red bg:black)"
 format = '[$symbol$common_meaning$signal_name$maybe_int]($style)'
+
+[custom.uv_python]
+command = 'uv python find --show-version'
+format = 'via [${symbol}(${output} )]($style)'
+symbol = "uv "
+detect_extensions = ['py', 'ipynb']
+detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'uv.lock', 'pylock.toml']
+style = "bold purple"
