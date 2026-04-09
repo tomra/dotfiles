@@ -168,7 +168,7 @@ return {
 		vim.lsp.config("terraformls", {})
 
 		vim.lsp.config("ansiblels", {
-			filetypes = { "yaml.ansible" },
+			filetypes = { "yaml.ansible", "ansible" },
 		})
 
 		vim.lsp.config("yamlls", {

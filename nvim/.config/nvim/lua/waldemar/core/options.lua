@@ -50,11 +50,3 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
-
--- filetype detection
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-    pattern = {"*/playbooks/*.yml", "*/playbooks/*.yaml", "*/roles/*/tasks/*.yml", "*/group_vars/*", "*/host_vars/*"},
-    callback = function()
-      vim.bo.filetype = "yaml.ansible"
-    end,
-  })
