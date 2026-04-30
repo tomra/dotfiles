@@ -83,6 +83,9 @@ return {
 
 		vim.lsp.config("*", {
 			capabilities = capabilities,
+      on_init = function(client)
+        client.server_capabilities.semanticTokensProvider = nil
+      end,
 		})
 
 		vim.lsp.config("html", {})
@@ -91,24 +94,16 @@ return {
 
 		vim.lsp.config("cssls", {})
 
-		vim.lsp.config("pyright", {
-			settings = {
-				pyright = {
-					-- Using Ruff's import organizer
-					disableOrganizeImports = true,
-				},
-				python = {
-					analysis = {
-						typeCheckingMode = "basic",
-						autoSearchPath = true,
-						useLibraryCodeForTypes = true,
-						-- -- Ignore all files for analysis to exclusively use Ruff for linting
-						-- ignore = { "*" },
-					},
-				},
-			},
-			filetypes = { "python" },
-		})
+    vim.lsp.config("pyrefly", {
+      settings = {
+        python = {
+            pyrefly = {
+                displayTypeErrors = 'force-on'
+            }
+        }
+      },
+      filetypes = { "python" },
+    })
 
 		vim.lsp.config("ruff", {})
 
