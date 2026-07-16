@@ -88,6 +88,8 @@
   path = .gitconfig.work
 [includeif "gitdir:/Users/wreger/.dotfiles/"]
   path = .gitconfig.private
+[includeif "gitdir:/Users/wreger/dotfiles/"]
+  path = .gitconfig.private
 
 
 [alias]
