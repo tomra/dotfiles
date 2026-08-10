@@ -29,7 +29,7 @@ alias f='fzf --preview "bat --color \"always\" {}"'
 alias man='tldr'
 alias top='glances'
 alias myip='curl https://ifconfig.co'
-
+alias s=switch      # Switch k8s context
 # iA Writer Alias
 alias ia="open $1 -a /Applications/iA\ Writer.app"
 

@@ -36,6 +36,8 @@ _comp_options+=(globdots)		# Include hidden files.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zshlocal ] && source ~/.zshlocal
 
+set -o emacs
+
 # load zsh plugins
 source ${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -52,6 +54,5 @@ export PATH="$PATH:/Users/wreger/.lmstudio/bin"
 # End of LM Studio CLI section
 
 source <(switcher init zsh)
-alias s=switch
 source <(switch completion zsh)
 eval "$(mise activate zsh)"
