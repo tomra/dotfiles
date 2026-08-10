@@ -42,4 +42,6 @@ export FZF_DEFAULT_OPTS="--height 60% \
 --marker ⇒"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
 export FZF_COMPLETION_DIR_COMMANDS="cd pushd rmdir tree ls"
+
+export K9S_CONFIG_DIR="~/.config/k9s"
 source $HOME/.cargo/env
