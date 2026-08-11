@@ -1,0 +1,12 @@
+k9s:
+  cluster: os02-prod-eu01-m-milhelm
+  namespace:
+    active: default
+    lockFavorites: false
+    favorites:
+      - default
+  view:
+    active: v1/pods default
+  featureGates:
+    nodeShell: false
+  proxy: null
