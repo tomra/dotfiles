@@ -86,6 +86,8 @@
   path = .gitconfig.private
 [includeif "gitdir:/Users/wreger/Documents/dev/inovex/"]
   path = .gitconfig.work
+[includeif "gitdir:/Users/wreger/Documents/dev/Projects/stackit/"]
+  path = .gitconfig.stackit
 [includeif "gitdir:/Users/wreger/.dotfiles/"]
   path = .gitconfig.private
 [includeif "gitdir:/Users/wreger/dotfiles/"]
